@@ -142,7 +142,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6분 읽기 (대략 964 단어)
+                    6분 읽기 (대략 912 단어)
                 </span>
                 
                 
@@ -151,7 +151,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/16/start-blog/">start-blog</a>
+                <a class="has-link-black-ter" href="/2020/03/16/start-blog/">Github 블로그 만들기 with Hexo</a>
             
         </h1>
         <div class="content">
@@ -160,9 +160,10 @@
 
 <h2 id="Github-Pages-생성을-위한-저장소-생성"><a href="#Github-Pages-생성을-위한-저장소-생성" class="headerlink" title="Github Pages 생성을 위한 저장소 생성"></a>Github Pages 생성을 위한 저장소 생성</h2><p>github에서 블로그용 프로젝트를 생성한다. </p>
 <ul>
-<li>저장소 명은 ‘~.github.io’ 로 생성하기 </li>
+<li>저장소 명은 ‘유저명.github.io’ 로 생성하기 </li>
 <li>로컬에 설치 </li>
 </ul>
+<p>유저명이 아닌 것으로 만들경우, <a href="https://yonguilee.github.io/yongui2.github.io">https://yonguilee.github.io/yongui2.github.io</a> 이런식으로 만들어질 것이다. </p>
 <br>
 
 <h2 id="Hexo-설치"><a href="#Hexo-설치" class="headerlink" title="Hexo 설치"></a>Hexo 설치</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g --save</span><br><span class="line"></span><br><span class="line"><span class="comment">#hexo init 폴더명(root)</span></span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
@@ -192,16 +193,19 @@
 <p>로컬에서 돌려보면 4000번 포트로 확인 가능하다. </p>
 <h3 id="배포위한-페이지-생성"><a href="#배포위한-페이지-생성" class="headerlink" title="배포위한 페이지 생성"></a>배포위한 페이지 생성</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 
-<p>원하는 레이아웃(blog/scaffolds)으로 문서 source 파일(source/)을 생성한다.<br>디폴트 레이아웃은 post.md 이다.  </p>
+
 <h3 id="배포"><a href="#배포" class="headerlink" title="배포"></a>배포</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>간혹, 수정한 내용이 반영안되는 경우가 있는데 아래 명령어를 수행 후 다시 generate 후 deploy 하면 된다. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 
 <br>
+---
 
-<h2 id="테마-설치"><a href="#테마-설치" class="headerlink" title="테마 설치"></a>테마 설치</h2><p>Hexo를 설치하면 기본테마는 landscape 이다.<br>이 외 테마들은 <a href="https://hexo.io/themes/">Hexo 테마</a>에서 확인할 수 있고 원하는 테마를 다운 받으면 된다.<br>나는 <strong>icarus</strong>를 적용할 것이다.<br>보통 테마 데모 화면을 보면 설치방법, 기능들에 대한 설명을 확인할 수 있다. </p>
-<p>나는 <strong>icarus</strong> 데모 사이트의 <strong><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/uncategorized/getting-started-with-icarus/">Getting Started with Icarus</a></strong>를 참고 했다.</p>
+<h2 id="테마-설치-icarus"><a href="#테마-설치-icarus" class="headerlink" title="테마 설치 (icarus)"></a>테마 설치 (icarus)</h2><p>Hexo를 설치하면 기본테마는 landscape 이고, 마음에 들지 않을 경우 <a href="https://hexo.io/themes/">Hexo 테마</a>에서 원하는 테마를 다운 받으면 된다. </p>
+<p><strong><a href="https://github.com/ppoffice/hexo-theme-icarus">icarus Git repo</a></strong><br><strong><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/">icarus demo</a></strong></p>
+<br>
+
 <h3 id="테마-저장소-git-clone"><a href="#테마-저장소-git-clone" class="headerlink" title="테마 저장소 git clone"></a>테마 저장소 git clone</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog </span><br><span class="line">git <span class="built_in">clone</span> https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</span><br></pre></td></tr></table></figure>
 
 <p>테마를 clone하게 되면 themes/ 하위에 icarus 폴더가 생성된다. </p>
@@ -209,19 +213,21 @@
 <p>같은 설정파일이지만, 설정할 수 있는 부분이 다르니 잘 찾아서 활용하자. </p>
 <p>blog/_config.yml : 블로그 설정 파일</p>
 <p>blog/themes/icarus/_config.yml : 테마 관련 설정 파일 </p>
+<br>
+
 <h3 id="blog-config-yml-에서-테마-변경하기"><a href="#blog-config-yml-에서-테마-변경하기" class="headerlink" title="blog/_config.yml 에서 테마 변경하기"></a><code>blog/_config.yml</code> 에서 테마 변경하기</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: icarus</span><br></pre></td></tr></table></figure>
 
 
 <br>
+---
 
-<p>##에러 </p>
-<h3 id="Package-cheerio-is-not-installed"><a href="#Package-cheerio-is-not-installed" class="headerlink" title="Package cheerio is not installed"></a>Package cheerio is not installed</h3><p>icarus 설치 후 , <code>hexo server</code>를 실행했을 때 마주할 수 있는 에러이다. </p>
+<h2 id="에러"><a href="#에러" class="headerlink" title="에러"></a>에러</h2><h3 id="Package-cheerio-is-not-installed"><a href="#Package-cheerio-is-not-installed" class="headerlink" title="Package cheerio is not installed"></a><strong>Package cheerio is not installed</strong></h3><p>icarus 설치 후 , <code>hexo server</code>를 실행했을 때 마주할 수 있는 에러이다. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR Package cheerio is not installed.</span><br><span class="line">ERROR Please install the missing dependencies from the root directory of your Hexo site.</span><br></pre></td></tr></table></figure>
 
 <p>간단하게, cheerio를 설치해주면 된다. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cheerio</span><br></pre></td></tr></table></figure>
 
-<p>cheerio 설치 후 <code>hexo server</code>를 다시 수행하면 잘 빌드된 화면을 볼 수 있다. </p>
+<p>cheerio 설치 후 <code>hexo server</code>를 다시 수행하면 잘 빌드된 화면을 볼 수 있다.<br><br></p>
 <h3 id="Deployer-not-found-git"><a href="#Deployer-not-found-git" class="headerlink" title="Deployer not found: git"></a>Deployer not found: git</h3><p>배포를 위해 <code>hexo deploy</code>를 실행할 경우 마주할 수 있는 에러이다. </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
 
@@ -488,14 +494,14 @@
             
             <a href="/2020/03/16/start-blog/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="start-blog">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Github 블로그 만들기 with Hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T09:03:35.000Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/start-blog/" class="title has-link-black-ter is-size-6 has-text-weight-normal">start-blog</a>
+                    <a href="/2020/03/16/start-blog/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Github 블로그 만들기 with Hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -583,14 +589,14 @@
             
             <a href="/2020/03/16/start-blog/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="start-blog">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Github 블로그 만들기 with Hexo">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T09:03:35.000Z">2020-03-16</time></div>
-                    <a href="/2020/03/16/start-blog/" class="title has-link-black-ter is-size-6 has-text-weight-normal">start-blog</a>
+                    <a href="/2020/03/16/start-blog/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Github 블로그 만들기 with Hexo</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
