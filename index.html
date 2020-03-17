@@ -29,7 +29,7 @@
 
 
 
-<link rel="icon" href="/images/favicon.svg">
+<link rel="icon" href="/images/logo.png">
 
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
@@ -79,7 +79,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="yongui&#39;s blog" height="28">
+                <img src="/images/logo.png" alt="yongui&#39;s blog" height="28">
             
             </a>
         </div>
@@ -106,14 +106,6 @@
             
             <div class="navbar-end">
                 
-                    
-                    <a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                    
-                
                 
                 
                 <a class="navbar-item search" title="검색" href="javascript:;">
@@ -132,17 +124,27 @@
     
 <div class="card">
     
+    <div class="card-image">
+        <a href="/2020/03/17/custom-theme-3/" class="image is-7by1">
+            <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿">
+        </a>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-17T02:08:32.000Z">2020-03-17</time>
+                <time class="level-item has-text-grey" datetime="2020-03-17T06:03:25.000Z">2020-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Dev/">Dev</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5분 읽기 (대략 694 단어)
+                    3분 읽기 (대략 517 단어)
                 </span>
                 
                 
@@ -151,41 +153,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2020/03/17/custom-theme-1/">Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정</a>
+                <a class="has-link-black-ter" href="/2020/03/17/custom-theme-3/">Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿</a>
             
         </h1>
         <div class="content">
             <br>
 
 
-
-<p><code>themes/icarus/_config.yml</code>에서 수정 가능하다. </p>
-<p>각 위젯별 이름은 <strong>type</strong> 에 명시가 되어있고, 배치는 <strong>position</strong>에서 left, rightf로만 수정이 가능하다.<br>아예 숨기고 싶을 경우에는 해당 위젯 영역을 삭제하거나 주석처리하면 된다. </p>
-<h2 id="프로필-위젯"><a href="#프로필-위젯" class="headerlink" title="프로필 위젯"></a><strong>프로필 위젯</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">widgets:</span><br><span class="line">  -</span><br><span class="line">    <span class="comment"># Widget name</span></span><br><span class="line">    <span class="built_in">type</span>: profile</span><br><span class="line">    <span class="comment"># Where should the widget be placed, left or right</span></span><br><span class="line">    position: left</span><br><span class="line">    <span class="comment"># 이름 </span></span><br><span class="line">    author: Yongui Lee</span><br><span class="line">    <span class="comment"># 프로필 제목</span></span><br><span class="line">    author_title: UI 개발</span><br><span class="line">    <span class="comment"># 위치 </span></span><br><span class="line">    location: Republic of Korea</span><br><span class="line">    <span class="comment"># Path or URL to the avatar to be shown in the profile widget</span></span><br><span class="line">    avatar: <span class="string">'images/avatar2.png'</span></span><br><span class="line">    <span class="comment"># Email address for the Gravatar to be shown in the profile widget</span></span><br><span class="line">    gravatar: </span><br><span class="line">    <span class="comment"># 프로필 이미지 border-radius 여부  </span></span><br><span class="line">    avatar_rounded: <span class="literal">true</span></span><br><span class="line">    <span class="comment"># Path or URL for the follow button</span></span><br><span class="line">    follow_link: <span class="string">'https://github.com/yonguilee'</span></span><br><span class="line">    <span class="comment"># Links to be shown on the bottom of the profile widget</span></span><br><span class="line">    social_links:</span><br><span class="line">      Github:</span><br><span class="line">          icon: fab fa-github</span><br><span class="line">          url: <span class="string">'https://github.com/yonguilee'</span></span><br><span class="line">      <span class="comment"># Facebook:</span></span><br><span class="line">      <span class="comment">#     icon: fab fa-facebook</span></span><br><span class="line">      <span class="comment">#     url: 'https://facebook.com'</span></span><br><span class="line">      Twitter:</span><br><span class="line">          icon: fab fa-twitter</span><br><span class="line">          url: <span class="string">'https://twitter.com/yongui9'</span></span><br><span class="line">      <span class="comment"># Dribbble:</span></span><br><span class="line">      <span class="comment">#     icon: fab fa-dribbble</span></span><br><span class="line">      <span class="comment">#     url: 'https://dribbble.com'</span></span><br><span class="line">      <span class="comment"># RSS:</span></span><br><span class="line">      <span class="comment">#     icon: fas fa-rss</span></span><br><span class="line">      <span class="comment">#     url: /</span></span><br><span class="line">  -</span><br><span class="line">  </span><br><span class="line">  ...</span><br></pre></td></tr></table></figure>
-
-<p>나는 기본적인 설정만 하였고, Facebook, Dribble, RSS는 사용하지 않기에 주석처리하였다. 프로필 사진의 경우는 기본 프로필 사진(<code>themes/icarus/source/images/avatar.png</code>)에 덮어써도 되고, avatar부분에 경로를 적어주면 된다.</p>
-<p>이미지는 <code>themes/icarus/source/images</code>에 추가하면 <code>hexo generate</code>으로 <code>public</code>폴더가 생성될 때 하위 <code>images</code>폴더에 자동 생성된다. 경로는 generate 되었을 때의 경로를 생각하여 추가하면 된다.  </p>
-<ul>
-<li>경로 예시 : <code>images/avatar2.png</code></li>
-</ul>
-<p><strong>반영 결과</strong> </p>
-<p><img src="images/img_custom_theme1_1.jpg" alt="img_custom-theme-1-1"></p>
-<h2 id="배치-수정"><a href="#배치-수정" class="headerlink" title="배치 수정"></a><strong>배치 수정</strong></h2><p>내가 생각한 배치 </p>
-<ul>
-<li><p>left : profile, tag</p>
-</li>
-<li><p>right : toc, category, recent_posts, archive</p>
-</li>
-<li><p>제외 : links, tagcloud</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">widgets:</span><br><span class="line"></span><br><span class="line">  ...</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Widget name</span></span><br><span class="line">  <span class="built_in">type</span>: toc</span><br><span class="line">  <span class="comment"># Where should the widget be placed, left or right</span></span><br><span class="line">  position: right</span><br><span class="line">-</span><br><span class="line">  <span class="comment"># # Widget name</span></span><br><span class="line">  <span class="comment"># type: links</span></span><br><span class="line">  <span class="comment"># # Where should the widget be placed, left or right</span></span><br><span class="line">  <span class="comment"># position: left</span></span><br><span class="line">  <span class="comment"># # Links to be shown in the links widget</span></span><br><span class="line">  <span class="comment"># links:</span></span><br><span class="line">  <span class="comment">#     Hexo: 'https://hexo.io'</span></span><br><span class="line">  <span class="comment">#     PPOffice: 'https://github.com/ppoffice'</span></span><br><span class="line"><span class="comment"># -</span></span><br><span class="line">  <span class="comment"># Widget name</span></span><br><span class="line">  <span class="built_in">type</span>: category</span><br><span class="line">  <span class="comment"># Where should the widget be placed, left or right</span></span><br><span class="line">  position: right</span><br><span class="line">-</span><br><span class="line">  <span class="comment"># # Widget name</span></span><br><span class="line">  <span class="comment"># type: tagcloud</span></span><br><span class="line">  <span class="comment"># # Where should the widget be placed, left or right</span></span><br><span class="line">  <span class="comment"># position: left</span></span><br><span class="line"><span class="comment"># -</span></span><br><span class="line">  <span class="comment"># Widget name</span></span><br><span class="line">  <span class="built_in">type</span>: recent_posts</span><br><span class="line">  <span class="comment"># Where should the widget be placed, left or right</span></span><br><span class="line">  position: right</span><br><span class="line">-</span><br><span class="line">  <span class="comment"># Widget name</span></span><br><span class="line">  <span class="built_in">type</span>: archive</span><br><span class="line">  <span class="comment"># Where should the widget be placed, left or right</span></span><br><span class="line">  position: right</span><br><span class="line">-</span><br><span class="line">  <span class="comment"># Widget name</span></span><br><span class="line">  <span class="built_in">type</span>: tag</span><br><span class="line">  <span class="comment"># Where should the widget be placed, left or right</span></span><br><span class="line">  position: left</span><br></pre></td></tr></table></figure>
-
-<p>주석 처리할 때에는 - 표시가 중복되지 않도록 하는 것이 중요하고, 작성된 순서대로 배치 순서가 결정되니 원하는 순서대로 작성하면 된다.  </p>
-<h2 id="위젯-고정"><a href="#위젯-고정" class="headerlink" title="위젯 고정"></a><strong>위젯 고정</strong></h2><p>위젯이 위치한 양쪽 영역을 sidebar라고 부르고, 스크롤할 때 left/right 각 영역의 고정 여부를 설정할 수 있다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sidebar:</span><br><span class="line">    <span class="comment"># left sidebar settings</span></span><br><span class="line">    left:</span><br><span class="line">        <span class="comment"># Whether the left sidebar is sticky when page scrolls</span></span><br><span class="line">        <span class="comment"># https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/make-a-sidebar-sticky-when-page-scrolls/</span></span><br><span class="line">        sticky: <span class="literal">true</span></span><br><span class="line">    <span class="comment"># right sidebar settings</span></span><br><span class="line">    right:</span><br><span class="line">        <span class="comment"># Whether the right sidebar is sticky when page scrolls</span></span><br><span class="line">        <span class="comment"># https://ppoffice.github.io/hexo-theme-icarus/Configuration/Theme/make-a-sidebar-sticky-when-page-scrolls/</span></span><br><span class="line">        sticky: <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p>기본적인 글 생성과 자주 사용하는 탬플릿을 커스텀하는 방법에 대해 알아보려고 한다. </p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/17/custom-theme-3/#more">자세히 보기</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -201,17 +186,145 @@
     
 <div class="card">
     
+    <div class="card-image">
+        <a href="/2020/03/17/custom-theme-2/" class="image is-7by1">
+            <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 2. 헤더 , 푸터 + 디자인">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-17T05:04:48.000Z">2020-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Dev/">Dev</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3분 읽기 (대략 406 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/17/custom-theme-2/">Hexo Icarus 테마 커스텀하기 - 2. 헤더 , 푸터 + 디자인</a>
+            
+        </h1>
+        <div class="content">
+            <p>테마 커스텀하기 2단계 : 헤더, 푸터 영역과 디자인 커스텀하기 위해 찾아본 내용들이다. </p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/17/custom-theme-2/#more">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2020/03/17/custom-theme-1/" class="image is-7by1">
+            <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정">
+        </a>
+    </div>
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-17T02:08:32.000Z">2020-03-17</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Dev/">Dev</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5분 읽기 (대략 737 단어)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/17/custom-theme-1/">Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정</a>
+            
+        </h1>
+        <div class="content">
+            <p>테마 커스텀하기 1단계 : 내가 보기 편한 레이아웃을 만들며 정리한 내용이다. </p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/17/custom-theme-1/#more">자세히 보기</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    
+<div class="card">
+    
+    <div class="card-image">
+        <a href="/2020/03/16/start-blog/" class="image is-7by1">
+            <img class="thumbnail" src="/images/thumb1.png" alt="Github 블로그 만들기 with Hexo">
+        </a>
+    </div>
+    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-03-16T09:03:35.000Z">2020-03-16</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/Dev/">Dev</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    6분 읽기 (대략 856 단어)
+                    6분 읽기 (대략 906 단어)
                 </span>
                 
                 
@@ -224,96 +337,17 @@
             
         </h1>
         <div class="content">
-            <br>
-
-<h2 id="Github-Pages-생성을-위한-저장소-생성"><a href="#Github-Pages-생성을-위한-저장소-생성" class="headerlink" title="Github Pages 생성을 위한 저장소 생성"></a><strong>Github Pages 생성을 위한 저장소 생성</strong></h2><p>github에서 블로그용 프로젝트를 생성한다. </p>
-<ul>
-<li>저장소 명은 ‘유저명.github.io’ 로 생성하기 </li>
-<li>로컬에 설치 </li>
-</ul>
-<p>유저명이 아닌 것으로 만들경우, <a href="https://yonguilee.github.io/yongui2.github.io">https://yonguilee.github.io/yongui2.github.io</a> 이런식으로 만들어질 것이다. </p>
-<br>
-<hr>
-
-<h2 id="Hexo-설치"><a href="#Hexo-설치" class="headerlink" title="Hexo 설치"></a><strong>Hexo 설치</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g --save</span><br><span class="line"></span><br><span class="line"><span class="comment">#hexo init 폴더명(root)</span></span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<p><code>blog/</code> 하위 <code>_config.yml</code>에서 설정된 부분들을 개인에 맞게 커스텀 할 수 있다. </p>
-<br>
-<hr>
-
-<h2 id="설정-파일-config-yml"><a href="#설정-파일-config-yml" class="headerlink" title="설정 파일 :  _config.yml"></a><strong>설정 파일 :  _config.yml</strong></h2><p><code>_config.yml</code>는 기본 설정 파일이다.<br>각 항목에 대한 자세한 설명은 <a href="https://hexo.io/docs/configuration">Hexo Document &gt; Configuration</a>에서 확인 가능하다. </p>
-<p><strong># Site</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: yonggari&#39;s blog</span><br><span class="line">subtitle: &#39;척척박사가 될때까지&#39;</span><br><span class="line">description: &#39;반복해서 봐야 기억하는 나의 모자름을 보완하기 위한 수단&#39;</span><br><span class="line">keywords: UI &amp; FE </span><br><span class="line">author: YongUi Lee</span><br><span class="line">language: ko</span><br><span class="line">timezone: &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<p>여기서 language는 테마의 기본 언어를 설정해주는 것으로, 아마.. 이 글을 읽는 사람은 모두 ko 라고 적겠지만, 다른 언어를 선택하고자 한다면 <code>themes/languages</code>에 있는 언어명 중에서 찾아 동일하게 적어주면 된다. </p>
-<p><strong># Deployment</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<p>다음과 같이 블로그로 사용할 저장소를 추가해 주면 된다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;yonguilee&#x2F;yonggari.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
-
-<br>
-<hr>
-
-<h2 id="명령어"><a href="#명령어" class="headerlink" title="명령어"></a><strong>명령어</strong></h2><p><strong>기본 페이지 생성</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo new [layout] 페이지명</span></span><br><span class="line">$ hexo new 페이지명</span><br></pre></td></tr></table></figure>
-
-<p>원하는 레이아웃(blog/scaffolds)으로 문서 source 파일(source/)을 생성한다.<br>디폴트 레이아웃은 post.md 이다.  </p>
-<p><strong>로컬 빌드</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>로컬에서 돌려보면 4000번 포트로 확인 가능하다. </p>
-<p><strong>배포위한 페이지 생성</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p><strong>배포</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>간혹, 수정한 내용이 반영안되는 경우가 있는데 아래 명령어를 수행 후 다시 generate 후 deploy 하면 된다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<br>
-<hr>
-
-<h2 id="테마-설치-icarus"><a href="#테마-설치-icarus" class="headerlink" title="테마 설치 (icarus)"></a><strong>테마 설치 (icarus)</strong></h2><p>Hexo를 설치하면 기본테마는 landscape 이고, 마음에 들지 않을 경우 <a href="https://hexo.io/themes/">Hexo 테마</a>에서 원하는 테마를 다운 받으면 된다. </p>
-<p><strong><a href="https://github.com/ppoffice/hexo-theme-icarus">icarus Git repo</a></strong><br><strong><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/">icarus demo</a></strong></p>
-<br>
-
-<p><strong>테마 저장소 git clone</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog </span><br><span class="line">git <span class="built_in">clone</span> https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</span><br></pre></td></tr></table></figure>
-
-<p>테마를 clone하게 되면 themes/ 하위에 icarus 폴더가 생성된다. </p>
-<p>테마를 설치하면 <code>icarus</code>폴더 내에도 <strong>_config.yml</strong> 가 생성된다. </p>
-<p>같은 설정파일이지만, 설정할 수 있는 부분이 다르니 잘 찾아서 활용하자. </p>
-<p>blog/_config.yml : 블로그 설정 파일</p>
-<p>blog/themes/icarus/_config.yml : 테마 관련 설정 파일 </p>
-<br>
-
-<p><strong><code>blog/_config.yml</code> 에서 테마 변경하기</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: icarus</span><br></pre></td></tr></table></figure>
-
-
-<br>
-<hr>
-
-<h2 id="에러"><a href="#에러" class="headerlink" title="에러"></a><strong>에러</strong></h2><p><strong>Package cheerio is not installed</strong></p>
-<p>icarus 설치 후 , <code>hexo server</code>를 실행했을 때 마주할 수 있는 에러이다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR Package cheerio is not installed.</span><br><span class="line">ERROR Please install the missing dependencies from the root directory of your Hexo site.</span><br></pre></td></tr></table></figure>
-
-<p>간단하게, cheerio를 설치해주면 된다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cheerio</span><br></pre></td></tr></table></figure>
-
-<p>cheerio 설치 후 <code>hexo server</code>를 다시 수행하면 잘 빌드된 화면을 볼 수 있다.<br><br></p>
-<p><strong>Deployer not found: git</strong></p>
-<p>배포를 위해 <code>hexo deploy</code>를 실행할 경우 마주할 수 있는 에러이다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
-
-<p>hexo 환경에서 github 배포를 위한 모듈을 설치해주면 된다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
+            <p>One Note를 정리 노트로 사용했었는데, Github.io 블로그에 하나씩 옮겨보려 한다.<br>Github pages 와 Hexo로 블로그를 만드는 과정에 대한 글이다.  </p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2020/03/16/start-blog/#more">자세히 보기</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -332,7 +366,7 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left is-sticky">
     
         
 <div class="card widget">
@@ -371,7 +405,7 @@
                     </p>
                     <a href="/archives">
                         <p class="title has-text-weight-normal">
-                            2
+                            4
                         </p>
                     </a>
                 </div>
@@ -383,7 +417,7 @@
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            0
+                            2
                         </p>
                     </a>
                 </div>
@@ -395,7 +429,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            0
+                            3
                         </p>
                     </a>
                 </div>
@@ -431,6 +465,34 @@
 </div>
     
         
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                카테고리
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/Dev/">
+            <span class="level-start">
+                <span class="level-item">Dev</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">
+            <span class="level-start">
+                <span class="level-item">블로그 운영</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li></ul></li>
+            </ul>
+        </div>
+    </div>
+</div>
     
         <div class="card widget">
     <div class="card-content">
@@ -440,27 +502,36 @@
             </h3>
             <div class="field is-grouped is-grouped-multiline">
                 
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Github-%EB%B8%94%EB%A1%9C%EA%B7%B8/">
+                        <span class="tag">Github 블로그</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Hexo/">
+                        <span class="tag">Hexo</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/Icarus/">
+                        <span class="tag">Icarus</span>
+                        <span class="tag is-grey">4</span>
+                    </a>
+                </div>
+                
             </div>
         </div>
     </div>
 </div>
     
     
-        <div class="column-right-shadow is-hidden-widescreen ">
+        <div class="column-right-shadow is-hidden-widescreen is-sticky">
         
             
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                카테고리
-            </h3>
-            <ul class="menu-list">
-            
-            </ul>
-        </div>
-    </div>
-</div>
         
             <div class="card widget">
     <div class="card-content">
@@ -470,9 +541,47 @@
         
         <article class="media">
             
+            <a href="/2020/03/17/custom-theme-3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T06:03:25.000Z">2020-03-17</time></div>
+                    <a href="/2020/03/17/custom-theme-3/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/17/custom-theme-2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 2. 헤더 , 푸터 + 디자인">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T05:04:48.000Z">2020-03-17</time></div>
+                    <a href="/2020/03/17/custom-theme-2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo Icarus 테마 커스텀하기 - 2. 헤더 , 푸터 + 디자인</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/17/custom-theme-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정">
                 </p>
             </a>
             
@@ -481,7 +590,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T02:08:32.000Z">2020-03-17</time></div>
                     <a href="/2020/03/17/custom-theme-1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
                     </p>
                 </div>
             </div>
@@ -491,7 +600,7 @@
             
             <a href="/2020/03/16/start-blog/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Github 블로그 만들기 with Hexo">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Github 블로그 만들기 with Hexo">
                 </p>
             </a>
             
@@ -500,7 +609,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T09:03:35.000Z">2020-03-16</time></div>
                     <a href="/2020/03/16/start-blog/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Github 블로그 만들기 with Hexo</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
                     </p>
                 </div>
             </div>
@@ -523,7 +632,7 @@
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -542,21 +651,9 @@
 
 
 
-<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right is-sticky">
     
         
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                카테고리
-            </h3>
-            <ul class="menu-list">
-            
-            </ul>
-        </div>
-    </div>
-</div>
     
         <div class="card widget">
     <div class="card-content">
@@ -566,9 +663,47 @@
         
         <article class="media">
             
+            <a href="/2020/03/17/custom-theme-3/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T06:03:25.000Z">2020-03-17</time></div>
+                    <a href="/2020/03/17/custom-theme-3/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2020/03/17/custom-theme-2/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 2. 헤더 , 푸터 + 디자인">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T05:04:48.000Z">2020-03-17</time></div>
+                    <a href="/2020/03/17/custom-theme-2/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo Icarus 테마 커스텀하기 - 2. 헤더 , 푸터 + 디자인</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/17/custom-theme-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정">
                 </p>
             </a>
             
@@ -577,7 +712,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-17T02:08:32.000Z">2020-03-17</time></div>
                     <a href="/2020/03/17/custom-theme-1/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
                     </p>
                 </div>
             </div>
@@ -587,7 +722,7 @@
             
             <a href="/2020/03/16/start-blog/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Github 블로그 만들기 with Hexo">
+                    <img class="thumbnail" src="/images/thumb1.png" alt="Github 블로그 만들기 with Hexo">
                 </p>
             </a>
             
@@ -596,7 +731,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-16T09:03:35.000Z">2020-03-16</time></div>
                     <a href="/2020/03/16/start-blog/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Github 블로그 만들기 with Hexo</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/Dev/">Dev</a> / <a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
                     </p>
                 </div>
             </div>
@@ -619,7 +754,7 @@
                     <span class="level-item">3월 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">2</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -641,7 +776,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="yongui&#39;s blog" height="28">
+                    <img src="/images/logo.png" alt="yongui&#39;s blog" height="28">
                 
                 </a>
                 <p class="is-size-7">
@@ -652,34 +787,6 @@
                 </p>
             </div>
             <div class="level-end">
-            
-                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/">
-                        
-                        <i class="fab fa-creative-commons"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
-                        
-                        <i class="fab fa-creative-commons-by"></i>
-                        
-                    </a>
-                </p>
-                
-                <p class="control">
-                    <a class="button is-white is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus">
-                        
-                        <i class="fab fa-github"></i>
-                        
-                    </a>
-                </p>
-                
-                </div>
             
             </div>
         </div>
@@ -764,7 +871,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 
 
-<a id="back-to-top" title="Back to Top" href="javascript:;">
+<a id="back-to-top" title="Zurück nach oben" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
@@ -789,7 +896,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
             <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요..." />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
             <div class="ins-section-container"></div>

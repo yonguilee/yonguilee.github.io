@@ -1,5 +1,12 @@
+
+.ins-search-container {
+    border-radius: 4px;
+}
+
 .ins-section-container {
     position: relative;
+    padding: 10px;
+    border-radius: 0 0 4px 4px;
     background: #f7f7f7;
 }
 
@@ -9,7 +16,7 @@
 }
 
 .ins-section .ins-section-header, .ins-section .ins-search-item {
-    padding: 8px 15px;
+    padding: 15px;
 }
 
 .ins-section .ins-section-header {
@@ -38,6 +45,8 @@
 
 .ins-section .ins-search-item header .ins-title {
     margin-left: 8px;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .ins-section .ins-search-item .ins-search-preview {

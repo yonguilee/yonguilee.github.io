@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Github 블로그 만들기 with Hexo - yongui&#39;s blog</title>
+<title>Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿 - yongui&#39;s blog</title>
 
 
-    <meta name="description" content="One Note를 정리 노트로 사용했었는데, Github.io 블로그에 하나씩 옮겨보려 한다.Github pages 와 Hexo로 블로그를 만드는 과정에 대한 글이다.">
+    <meta name="description" content="기본적인 글 생성과 자주 사용하는 탬플릿을 커스텀하는 방법에 대해 알아보려고 한다.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Github 블로그 만들기 with Hexo">
-<meta property="og:url" content="https://yonguilee.github.io/2020/03/16/start-blog/index.html">
+<meta property="og:title" content="Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿">
+<meta property="og:url" content="https://yonguilee.github.io/2020/03/17/custom-theme-3/index.html">
 <meta property="og:site_name" content="yongui&#39;s blog">
-<meta property="og:description" content="One Note를 정리 노트로 사용했었는데, Github.io 블로그에 하나씩 옮겨보려 한다.Github pages 와 Hexo로 블로그를 만드는 과정에 대한 글이다.">
+<meta property="og:description" content="기본적인 글 생성과 자주 사용하는 탬플릿을 커스텀하는 방법에 대해 알아보려고 한다.">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:image" content="https://yonguilee.github.io/images/thumb1.png">
-<meta property="article:published_time" content="2020-03-16T09:03:35.000Z">
-<meta property="article:modified_time" content="2020-03-17T06:57:26.000Z">
+<meta property="article:published_time" content="2020-03-17T06:03:25.000Z">
+<meta property="article:modified_time" content="2020-03-17T06:57:20.000Z">
 <meta property="article:author" content="YongUi Lee">
 <meta property="article:tag" content="Github 블로그">
 <meta property="article:tag" content="Hexo">
@@ -83,7 +83,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.png" alt="Github 블로그 만들기 with Hexo" height="28">
+                <img src="/images/logo.png" alt="Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿" height="28">
             
             </a>
         </div>
@@ -133,7 +133,7 @@
     
     <div class="card-image">
         <span  class="image is-7by1">
-            <img class="thumbnail" src="/images/thumb1.png" alt="Github 블로그 만들기 with Hexo">
+            <img class="thumbnail" src="/images/thumb1.png" alt="Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿">
         </span>
     </div>
     
@@ -141,7 +141,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2020-03-16T09:03:35.000Z">2020-03-16</time>
+                <time class="level-item has-text-grey" datetime="2020-03-17T06:03:25.000Z">2020-03-17</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/Dev/">Dev</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Dev/%EB%B8%94%EB%A1%9C%EA%B7%B8-%EC%9A%B4%EC%98%81/">블로그 운영</a>
@@ -151,7 +151,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    6분 읽기 (대략 906 단어)
+                    3분 읽기 (대략 517 단어)
                 </span>
                 
                 
@@ -160,100 +160,41 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Github 블로그 만들기 with Hexo
+                Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿
             
         </h1>
         <div class="content">
-            <p>One Note를 정리 노트로 사용했었는데, Github.io 블로그에 하나씩 옮겨보려 한다.<br>Github pages 와 Hexo로 블로그를 만드는 과정에 대한 글이다.  </p>
+            <br>
+
+
+<p>기본적인 글 생성과 자주 사용하는 탬플릿을 커스텀하는 방법에 대해 알아보려고 한다. </p>
 <a id="more"></a>
 
-<br>
+<h2 id="기본"><a href="#기본" class="headerlink" title="기본"></a><strong>기본</strong></h2><p>새 글을 작성할 때 <code>hexo new post명</code>을 입력하면 <code>source/_posts</code>하위에 새 포스트가 생기면서 글을 쓸 수 있다. </p>
+<p>탬플릿 경로는 <code>scaffolds/</code>이고, 기본적으로 제공되는 탬플릿은 <strong>draft, page, post</strong>가 있다. 이중 <strong>post.md</strong>가 기본 탬플릿으로 사용되어 <code>hexo new post명</code>라고 치면 <strong>post</strong> 탬플릿으로 글이 생성된다. </p>
+<p>다른 탬플릿을 사용할 경우에는 <code>hexo 탬플릿이름 new post명</code>으로 포스트를 생성하면 된다.  기본 설정된 탬플릿을 바꾸고 싶다면, <code>blog/_config.yml</code>에서 수정하면 된다. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Writing</span></span><br><span class="line">...</span><br><span class="line">default_layout: post</span><br></pre></td></tr></table></figure>
 
-<h2 id="Github-Pages-생성을-위한-저장소-생성"><a href="#Github-Pages-생성을-위한-저장소-생성" class="headerlink" title="Github Pages 생성을 위한 저장소 생성"></a><strong>Github Pages 생성을 위한 저장소 생성</strong></h2><p>github에서 블로그용 프로젝트를 생성한다. </p>
+<br>
+<hr>
+
+<h2 id="탬플릿-커스텀"><a href="#탬플릿-커스텀" class="headerlink" title="탬플릿 커스텀"></a><strong>탬플릿 커스텀</strong></h2><p>기본적인 post 탬플릿 양식은 아래와 같다. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>나는 썸네일, toc(글 목차), 필수로 사용하는 마크다운 구조를 추가할 것이다. </p>
 <ul>
-<li>저장소 명은 ‘유저명.github.io’ 로 생성하기 </li>
-<li>로컬에 설치 </li>
+<li>tags : 글에 대한 태그들을 추가할 수 있다.</li>
+<li>toc : 글 상세페이지에서 글의 heading 태그들로 글 목차를 생성해주는 기능이다. </li>
+<li>thumbnail : <code>themes/icarus/_config.yml</code>에 기본적으로 썸네일을 보여주도록 설정되어있다. 나는 아예 기본 썸네일 경로를 추가해두었다. </li>
+<li><code>&lt;!-- more --&gt;</code> : 이 주석을 추가하지 않을 경우, 글 목차에서 글 전체 내용이 노출된다. 글 목록에서는 일부만 보여지고, 자세히 보기 버튼이 생성되도록 하려면 주석을 추가해 주면 되고, 주석 위에 글을 쓰지 않을 경우는 알아서 글 전체가 노출된다. </li>
 </ul>
-<p>유저명이 아닌 것으로 만들경우, <a href="https://yonguilee.github.io/yongui2.github.io">https://yonguilee.github.io/yongui2.github.io</a> 이런식으로 만들어질 것이다. </p>
-<br>
-<hr>
-
-<h2 id="Hexo-설치"><a href="#Hexo-설치" class="headerlink" title="Hexo 설치"></a><strong>Hexo 설치</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g --save</span><br><span class="line"></span><br><span class="line"><span class="comment">#hexo init 폴더명(root)</span></span><br><span class="line">$ hexo init blog</span><br><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
-
-<p><code>blog/</code> 하위 <code>_config.yml</code>에서 설정된 부분들을 개인에 맞게 커스텀 할 수 있다. </p>
-<br>
-<hr>
-
-<h2 id="설정-파일-config-yml"><a href="#설정-파일-config-yml" class="headerlink" title="설정 파일 :  _config.yml"></a><strong>설정 파일 :  _config.yml</strong></h2><p><code>_config.yml</code>는 기본 설정 파일이다.<br>각 항목에 대한 자세한 설명은 <a href="https://hexo.io/docs/configuration">Hexo Document &gt; Configuration</a>에서 확인 가능하다. </p>
-<p><strong># Site</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: yonggari&#39;s blog</span><br><span class="line">subtitle: &#39;척척박사가 될때까지&#39;</span><br><span class="line">description: &#39;반복해서 봐야 기억하는 나의 모자름을 보완하기 위한 수단&#39;</span><br><span class="line">keywords: UI &amp; FE </span><br><span class="line">author: YongUi Lee</span><br><span class="line">language: ko</span><br><span class="line">timezone: &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<p>여기서 language는 테마의 기본 언어를 설정해주는 것으로, 아마.. 이 글을 읽는 사람은 모두 ko 라고 적겠지만, 다른 언어를 선택하고자 한다면 <code>themes/languages</code>에 있는 언어명 중에서 찾아 동일하게 적어주면 된다. </p>
-<p><strong># Deployment</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: &#39;&#39;</span><br></pre></td></tr></table></figure>
-
-<p>다음과 같이 블로그로 사용할 저장소를 추가해 주면 된다. </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https:&#x2F;&#x2F;hexo.io&#x2F;docs&#x2F;deployment.html</span><br><span class="line">deploy: </span><br><span class="line">  type: git</span><br><span class="line">  repo: https:&#x2F;&#x2F;github.com&#x2F;yonguilee&#x2F;yonggari.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<p><a href="https://hexo.io/docs/front-matter">tag, category 추가 방법</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">thumbnail: images&#x2F;thumb1.png</span><br><span class="line">toc: true</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">서론 영역 </span><br><span class="line"></span><br><span class="line">&lt;!-- more --&gt;</span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line"></span><br><span class="line">## **title**</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;hr&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">## **title**</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;br&gt;</span><br><span class="line">&lt;hr&gt;</span><br></pre></td></tr></table></figure>
 
 
-<br>
-<hr>
-
-<h2 id="명령어"><a href="#명령어" class="headerlink" title="명령어"></a><strong>명령어</strong></h2><p><strong>기본 페이지 생성</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># hexo new [layout] 페이지명</span></span><br><span class="line">$ hexo new 페이지명</span><br></pre></td></tr></table></figure>
-
-<p>원하는 레이아웃(blog/scaffolds)으로 문서 source 파일(source/)을 생성한다.<br>디폴트 레이아웃은 post.md 이다.  </p>
-<p><strong>로컬 빌드</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>로컬에서 돌려보면 4000번 포트로 확인 가능하다. </p>
-<p><strong>배포위한 페이지 생성</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p><strong>배포</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>간혹, 수정한 내용이 반영안되는 경우가 있는데 아래 명령어를 수행 후 다시 generate 후 deploy 하면 된다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
-
-<br>
-<hr>
-
-<h2 id="테마-설치-icarus"><a href="#테마-설치-icarus" class="headerlink" title="테마 설치 (icarus)"></a><strong>테마 설치 (icarus)</strong></h2><p>Hexo를 설치하면 기본테마는 landscape 이고, 마음에 들지 않을 경우 <a href="https://hexo.io/themes/">Hexo 테마</a>에서 원하는 테마를 다운 받으면 된다. </p>
-<p><strong><a href="https://github.com/ppoffice/hexo-theme-icarus">icarus Git repo</a></strong><br><strong><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/">icarus demo</a></strong></p>
-<br>
-
-<p><strong>테마 저장소 git clone</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> blog </span><br><span class="line">git <span class="built_in">clone</span> https://github.com/ppoffice/hexo-theme-icarus.git themes/icarus</span><br></pre></td></tr></table></figure>
-
-<p>테마를 clone하게 되면 themes/ 하위에 icarus 폴더가 생성된다. </p>
-<p>테마를 설치하면 <code>icarus</code>폴더 내에도 <strong>_config.yml</strong> 가 생성된다. </p>
-<p>같은 설정파일이지만, 설정할 수 있는 부분이 다르니 잘 찾아서 활용하자. </p>
-<p>blog/_config.yml : 블로그 설정 파일</p>
-<p>blog/themes/icarus/_config.yml : 테마 관련 설정 파일 </p>
-<br>
-
-<p><strong><code>blog/_config.yml</code> 에서 테마 변경하기</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Extensions</span></span><br><span class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></span><br><span class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></span><br><span class="line">theme: icarus</span><br></pre></td></tr></table></figure>
-
-
-<br>
-<hr>
-
-<h2 id="에러"><a href="#에러" class="headerlink" title="에러"></a><strong>에러</strong></h2><p><strong>Package cheerio is not installed</strong></p>
-<p>icarus 설치 후 , <code>hexo server</code>를 실행했을 때 마주할 수 있는 에러이다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ERROR Package cheerio is not installed.</span><br><span class="line">ERROR Please install the missing dependencies from the root directory of your Hexo site.</span><br></pre></td></tr></table></figure>
-
-<p>간단하게, cheerio를 설치해주면 된다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install cheerio</span><br></pre></td></tr></table></figure>
-
-<p>cheerio 설치 후 <code>hexo server</code>를 다시 수행하면 잘 빌드된 화면을 볼 수 있다.<br><br></p>
-<p><strong>Deployer not found: git</strong></p>
-<p>배포를 위해 <code>hexo deploy</code>를 실행할 경우 마주할 수 있는 에러이다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ERROR Deployer not found: git</span><br></pre></td></tr></table></figure>
-
-<p>hexo 환경에서 github 배포를 위한 모듈을 설치해주면 된다. </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>수정한 내용을 저장하고 <code>hexo new test1</code>로 수정한 내용으로 파일이 잘 생성되는지 확인해본다. </p>
+<p>잘 생성되는 것 같다. </p>
+<p><img src="images/img_custom_theme3_1.png" alt=""></p>
 
         </div>
         
@@ -312,13 +253,13 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/17/custom-theme-1/">
-                <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Hexo Icarus 테마 커스텀하기 - 1. 레이아웃 수정</span>
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/03/17/custom-theme-2/">
+                <span class="level-item">Hexo Icarus 테마 커스텀하기 - 2. 헤더 , 푸터 + 디자인</span>
+                <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
-        
         
     </div>
 </div>
@@ -504,29 +445,13 @@
                     카탈로그
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#Github-Pages-생성을-위한-저장소-생성">
+        <a class="is-flex" href="#기본">
         <span class="has-mr-6">1</span>
-        <span>Github Pages 생성을 위한 저장소 생성</span>
+        <span>기본</span>
         </a></li><li>
-        <a class="is-flex" href="#Hexo-설치">
+        <a class="is-flex" href="#탬플릿-커스텀">
         <span class="has-mr-6">2</span>
-        <span>Hexo 설치</span>
-        </a></li><li>
-        <a class="is-flex" href="#설정-파일-config-yml">
-        <span class="has-mr-6">3</span>
-        <span>설정 파일 :  _config.yml</span>
-        </a></li><li>
-        <a class="is-flex" href="#명령어">
-        <span class="has-mr-6">4</span>
-        <span>명령어</span>
-        </a></li><li>
-        <a class="is-flex" href="#테마-설치-icarus">
-        <span class="has-mr-6">5</span>
-        <span>테마 설치 (icarus)</span>
-        </a></li><li>
-        <a class="is-flex" href="#에러">
-        <span class="has-mr-6">6</span>
-        <span>에러</span>
+        <span>탬플릿 커스텀</span>
         </a></li></ul>
             </div>
         </div>
@@ -662,29 +587,13 @@
                     카탈로그
                 </h3>
                 <ul class="menu-list"><li>
-        <a class="is-flex" href="#Github-Pages-생성을-위한-저장소-생성">
+        <a class="is-flex" href="#기본">
         <span class="has-mr-6">1</span>
-        <span>Github Pages 생성을 위한 저장소 생성</span>
+        <span>기본</span>
         </a></li><li>
-        <a class="is-flex" href="#Hexo-설치">
+        <a class="is-flex" href="#탬플릿-커스텀">
         <span class="has-mr-6">2</span>
-        <span>Hexo 설치</span>
-        </a></li><li>
-        <a class="is-flex" href="#설정-파일-config-yml">
-        <span class="has-mr-6">3</span>
-        <span>설정 파일 :  _config.yml</span>
-        </a></li><li>
-        <a class="is-flex" href="#명령어">
-        <span class="has-mr-6">4</span>
-        <span>명령어</span>
-        </a></li><li>
-        <a class="is-flex" href="#테마-설치-icarus">
-        <span class="has-mr-6">5</span>
-        <span>테마 설치 (icarus)</span>
-        </a></li><li>
-        <a class="is-flex" href="#에러">
-        <span class="has-mr-6">6</span>
-        <span>에러</span>
+        <span>탬플릿 커스텀</span>
         </a></li></ul>
             </div>
         </div>
@@ -812,7 +721,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Github 블로그 만들기 with Hexo" height="28">
+                    <img src="/images/logo.png" alt="Hexo Icarus 테마 커스텀하기 - 3. post 탬플릿" height="28">
                 
                 </a>
                 <p class="is-size-7">
